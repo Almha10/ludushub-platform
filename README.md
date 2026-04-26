@@ -43,17 +43,6 @@ This project demonstrates:
 
 ---
 
-## ⚙️ Run Locally
-```bash
-npm install
-npm run dev
---
-Open:
-http://localhost:3000
---
-
----
-
 ## 📌 Future Improvements
 - Real-time chat system  
 - Notifications system  
@@ -61,6 +50,9 @@ http://localhost:3000
 - External APIs integration  
 
 ---
+## ⚙️ Run Locally
+```bash
+npm install
+npm run dev
 
-## 👩‍💻 Author
-Maha Alanzi
+
