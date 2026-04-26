@@ -1,0 +1,288 @@
+.wrapper {
+  padding-top: 120px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background);
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.titleHead {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.arSubtitle {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-family: var(--font-cairo), sans-serif;
+  opacity: 0.9;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 1.5rem;
+  align-items: start;
+}
+
+.rightColumn {
+  position: sticky;
+  top: 100px;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+/* Skeleton Loading Structure */
+.centerFill {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--background);
+}
+
+.skeletonCard {
+  width: 380px; height: 540px; border-radius: 24px;
+  background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.2);
+  display: flex; flex-direction: column; padding: 2rem; gap: 2rem;
+  animation: pulse 2s infinite ease-in-out;
+}
+@keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+
+.skelHeader { display: flex; gap: 1rem; }
+.skelCircle { width: 60px; height: 60px; border-radius: 50%; background: rgba(139, 92, 246, 0.2); }
+.skelLine { height: 20px; background: rgba(139, 92, 246, 0.2); border-radius: 4px; width: 60%; margin-top: 10px; }
+.skelLineShort { width: 30%; }
+.skelBlock { flex: 1; background: rgba(139, 92, 246, 0.1); border-radius: 8px; }
+
+/* Posts Section Details */
+.postsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.postsHeader h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  color: #fff;
+}
+
+.composeBox {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.composeInput {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #fff;
+  font-size: 1.1rem;
+  outline: none;
+  min-height: 80px;
+  width: 100%;
+}
+
+.previewImageWrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 250px;
+}
+.previewImage {
+  width: 100%;
+  border-radius: 8px;
+}
+.removeImageBtn {
+  position: absolute;
+  top: 8px; right: 8px;
+  background: rgba(0,0,0,0.6);
+  border: none; color: #fff;
+  border-radius: 50%;
+  width: 24px; height: 24px;
+  display: flex; justify-content: center; align-items: center;
+  cursor: pointer;
+}
+
+.composeActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 1rem;
+}
+
+.composeButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.postsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.postCard {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.postCard:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postHeaderLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.postAuthor {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.postAvatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: rgba(255,255,255,0.1);
+}
+
+.postName {
+  display: block; font-weight: 700; color: #fff;
+}
+.postDate {
+  display: block; font-size: 0.8rem; color: rgba(255,255,255,0.4);
+}
+
+.postContentLine {
+  font-size: 1.05rem; color: rgba(255,255,255,0.9); margin: 0; line-height: 1.6;
+}
+
+.postImage {
+  width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);
+  max-height: 400px;
+  object-fit: cover;
+  margin-top: 0.5rem;
+}
+
+.postInteractions {
+  display: flex;
+  gap: 2rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.interactionBtn {
+  background: none; border: none; color: rgba(255,255,255,0.5);
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: color 0.2s;
+}
+.interactionBtn:hover { color: var(--accent); }
+
+.actionBtnIcon {
+  background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  padding: 0.4rem; border-radius: 50%; transition: background 0.2s;
+}
+.actionBtnIcon:hover { background: rgba(244, 63, 94, 0.15); }
+
+.emptyState {
+  padding: 4rem; text-align: center; color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.02); border-radius: 16px; border: 1px dashed rgba(255,255,255,0.1);
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  .rightColumn {
+    position: static;
+    width: 100%;
+  }
+}
+
+.roleSelectorCard {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.roleHead {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.roleSelect {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 8px;
+  outline: none;
+  font-family: 'Cairo', sans-serif;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.roleSelect:focus {
+  border-color: var(--accent);
+}
+
+.roleSelect option {
+  background: #111;
+  color: #fff;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "LudusHub Gaming Community",
+  "short_name": "LudusHub",
+  "description": "Connecting the future of gamers in Saudi Arabia and the world.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F14",
+  "theme_color": "#00E676",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

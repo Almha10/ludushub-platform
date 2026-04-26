@@ -1,0 +1,101 @@
+{
+  "Hero": {
+    "headline": "Connecting the future of gamers in Saudi Arabia and the world",
+    "quote": "\"I have been a gamer since I was young.\"",
+    "author": "— Mohammed bin Salman",
+    "subtitle": "The premier platform for digital identities and competitive communities.",
+    "joinNow": "Join Now"
+  },
+  "Navigation": {
+    "home": "Home",
+    "profile": "Profile",
+    "spaces": "Spaces",
+    "clubs": "Clubs",
+    "games": "Game Directory",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "About": {
+    "title": "Our Vision",
+    "description": "ArenaHub is the premier digital destination for gamers in Saudi Arabia. We believe every gamer is the hero of their own story, and our goal is to build the perfect environment where players compete and connect and clubs in one platform that reflects the ambitions of Vision 2030 in the gaming sector."
+  },
+  "Steps": {
+    "title": "Start Your Journey Now",
+    "step1": "Register Account",
+    "step1Desc": "Create your account quickly and securely.",
+    "step2": "Design Your Card",
+    "step2Desc": "Customize your digital identity and achievements.",
+    "step3": "Compete & Evolve",
+    "step3Desc": "Join clubs and dominate the global leaderboards."
+  },
+  "Features": {
+    "title": "Main Features",
+    "feature1": "3D Player Card",
+    "feature1Desc": "Your digital identity reflecting your gaming achievements.",
+    "feature2": "Clubs & Spaces",
+    "feature2Desc": "Join the strongest communities and participate in live discussions.",
+    "feature3": "Comprehensive Game Directory",
+    "feature3Desc": "Discover the latest games and live ratings via the RAWG API."
+  },
+  "Community": {
+    "highlights": "Community Highlights",
+    "highlightsDesc": "Follow the best players and exclusive content.",
+    "spaces": "Active Spaces",
+    "spacesDesc": "Currently trending discussion rooms.",
+    "popular": "Popular Games",
+    "popularDesc": "Most played games in our community."
+  },
+  "Auth": {
+    "title": "Create Your Digital Identity",
+    "subtitle": "Choose your path to begin",
+    "player": "Player",
+    "playerDesc": "Build your 3D card and join the community.",
+    "club": "Club",
+    "clubDesc": "Manage teams and scout for talent.",
+    "guest": "Guest",
+    "guestDesc": "Explore the game directory & news.",
+    "gamertag": "Gamertag",
+    "favGame": "Favorite Game Category",
+    "clubName": "Club Name",
+    "license": "License ID",
+    "location": "HQ Location",
+    "email": "Email Address",
+    "password": "Password",
+    "submit": "Sign In",
+    "back": "Back to selection"
+  },
+  "Spaces": {
+    "title": "Spaces",
+    "subtitle": "Welcome to the social core of ArenaHub.",
+    "trending": "Trending in Saudi Arabia",
+    "placeholder": "What's on your mind? Share with the community...",
+    "post": "Post",
+    "empty": "No posts found for"
+  },
+  "Clubs": {
+    "title": "Clubs Directory",
+    "subtitle": "Discover the top competitive esports organizations in Saudi Arabia or build your own legacy.",
+    "create": "Create / Register Club",
+    "showing": "Showing",
+    "search": "Search clubs...",
+    "join": "Join Community",
+    "orgs": "Orgs"
+  },
+  "HomeExtra": {
+    "liveActivity": "Live Activity Feed",
+    "activity1": "Ahmed unlocked 'Elden Lord' achievement",
+    "activity2": "Team Falcons won the weekly tournament",
+    "activity3": "Sara joined 'Riyadh Fighters' club",
+    "activityTime1": "2m ago",
+    "activityTime2": "15m ago",
+    "activityTime3": "1h ago",
+    "trendingGames": "Trending Games",
+    "topPlayers": "Top Players",
+    "joinCommunity": "Where Players Compete & Connect",
+    "joinCommunityDesc": "Join thousands of players in Saudi Arabia taking their competitive journey to the next level.",
+    "createProfile": "Create Your Profile",
+    "viewAll": "View All",
+    "view": "View",
+    "followers": "Followers"
+  }
+}

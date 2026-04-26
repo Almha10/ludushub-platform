@@ -1,0 +1,673 @@
+.pageWrapper {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #0b0e14;
+  color: #fff;
+  font-family: var(--font-inter, sans-serif);
+}
+
+/* Background Pattern */
+.backgroundPattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(rgba(0, 255, 156, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 156, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* =========================================================================
+   Hero Section
+========================================================================= */
+
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://storage.albiladpress.com/images/news/2019/06/f160933278014.jpg?=0.8989636504895069');
+  background-size: cover;
+  background-position: center top;
+  z-index: 1;
+  filter: brightness(0.5) contrast(1.1);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(75deg, rgba(11, 14, 20, 0.95) 0%, rgba(11, 14, 20, 0.4) 60%, transparent 100%);
+  z-index: 2;
+}
+
+.heroFadeBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to top, #0b0e14 0%, transparent 100%);
+  z-index: 3;
+}
+
+.heroContentContainer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: flex-start; /* Correct for RTL in flex container */
+}
+
+/* Ensure right alignment in RTL */
+:global([dir="rtl"]) .heroContentContainer {
+  justify-content: flex-start;
+}
+
+.heroContentRight {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.quoteBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+:global([dir="rtl"]) .quoteBlock {
+  align-items: flex-start; /* In RTL, start is Right */
+}
+
+.quoteText {
+  font-size: 3.5rem;
+  font-weight: 950;
+  color: #fff;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.8), 0 0 40px rgba(0, 255, 156, 0.4);
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.quoteAuthor {
+  font-size: 1.5rem;
+  color: #00FF9C;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  letter-spacing: 1px;
+}
+
+.cta {
+  width: fit-content;
+  margin-top: 1rem;
+  padding: 1rem 3.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  background: #00FF9C;
+  color: #0b0e14;
+  font-weight: 800;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 20px rgba(0, 255, 156, 0.3);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.cta:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 255, 156, 0.5), 0 0 15px rgba(0, 255, 156, 0.8);
+  background: #fff;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.5);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-10px) translateX(-50%); }
+  60% { transform: translateY(-5px) translateX(-50%); }
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.sectionTitleWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #00FF9C;
+  box-shadow: 0 0 10px #00FF9C;
+  border-radius: 2px;
+}
+
+/* Bi-directional alignment override */
+:global([dir="rtl"]) .quoteText,
+:global([dir="rtl"]) .quoteAuthor {
+  text-align: right; 
+}
+:global([dir="ltr"]) .quoteText,
+:global([dir="ltr"]) .quoteAuthor {
+  text-align: left; 
+}
+
+/* Hover Utilities */
+:global(.hover-glow) {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+:global(.hover-glow:hover) {
+  box-shadow: 0 0 30px rgba(0, 255, 156, 0.15), inset 0 0 20px rgba(139, 92, 246, 0.1);
+  border-color: rgba(0, 255, 156, 0.4);
+  background: rgba(20, 24, 30, 0.8);
+}
+
+:global(.hover-lift) {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform;
+}
+:global(.hover-lift:hover) {
+  transform: translateY(-12px) scale(1.02);
+}
+
+.glassPanel {
+  background: rgba(15, 20, 28, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.glassPanel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  transform: skewX(-25deg);
+  transition: 0.5s;
+}
+
+.glassPanel:hover::before {
+  left: 150%;
+}
+
+.neonText {
+  color: #00FF9C;
+  text-shadow: 0 0 10px rgba(0, 255, 156, 0.3);
+}
+
+.sectionSeparator {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 156, 0.3), transparent);
+  margin: 3rem 0;
+  position: relative;
+}
+.sectionSeparator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 1px;
+  background: #00FF9C;
+  box-shadow: 0 0 15px #00FF9C;
+}
+
+/* =========================================================================
+   Sections Design
+========================================================================= */
+
+.contentSection {
+  padding: 4rem 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Vision / About */
+.aboutContainer {
+  padding: 4rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.aboutText {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+
+/* Features Grid */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.featureCard {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.featureIcon {
+  width: 60px;
+  height: 60px;
+  background: rgba(139, 92, 246, 0.1);
+  color: #8B5CF6;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+.featureCard h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.featureCard p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+
+/* Steps */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  position: relative;
+}
+.stepCard {
+  padding: 3rem 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.stepNumber {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(0, 255, 156, 0.2), rgba(0, 255, 156, 0.05));
+  color: #00FF9C;
+  border: 1px solid rgba(0, 255, 156, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 900;
+  box-shadow: 0 0 25px rgba(0, 255, 156, 0.2);
+  margin-bottom: 1rem;
+}
+.stepCard h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.stepCard p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+
+/* Dashboard / New Sections */
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+.trendingGamesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.gameCard {
+  aspect-ratio: 3/4;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.gameCard:hover {
+  border-color: #8B5CF6;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+.gameOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 1rem 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.gameTitle {
+  font-weight: 800;
+  font-size: 1rem;
+}
+.gameViewers {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Activity Feed */
+.activityFeed {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.activityItem {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  transition: all 0.3s;
+  border-left: 3px solid transparent;
+}
+.activityItem:hover {
+  background: rgba(255,255,255,0.05);
+  border-left-color: #00FF9C;
+  transform: translateX(5px);
+}
+.activityIcon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activityIcon.achievement { background: rgba(0, 255, 156, 0.1); color: #00FF9C; }
+.activityIcon.tournament { background: rgba(139, 92, 246, 0.1); color: #8B5CF6; }
+.activityIcon.club { background: rgba(59, 130, 246, 0.1); color: #3B82F6; }
+
+.activityContent {
+  flex: 1;
+}
+.activityText {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ddd;
+}
+.activityTime {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+  margin-top: 0.3rem;
+  display: block;
+}
+
+/* Top Players */
+.topPlayersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.playerRow {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+.playerRow:hover {
+  background: rgba(255,255,255,0.05);
+  transform: translateX(5px);
+}
+.playerRank {
+  font-weight: 900;
+  color: rgba(255,255,255,0.2);
+  font-size: 1.6rem;
+  width: 30px;
+  text-align: center;
+}
+.playerAvatar {
+  width: 48px;
+  height: 48px;
+  background: #2a2a35;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.playerRow:nth-child(1) .playerAvatar { border-color: #FFD700; box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
+.playerRow:nth-child(2) .playerAvatar { border-color: #C0C0C0; box-shadow: 0 0 15px rgba(192, 192, 192, 0.3); }
+.playerRow:nth-child(3) .playerAvatar { border-color: #CD7F32; box-shadow: 0 0 15px rgba(205, 127, 50, 0.3); }
+
+.playerInfo {
+  flex: 1;
+}
+.playerName {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+.playerScore {
+  color: rgba(0, 255, 156, 0.7);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: 0.1rem;
+  display: block;
+}
+
+.playerViewBtn {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.playerViewBtn:hover {
+  background: #00FF9C;
+  color: #0b0e14;
+  border-color: #00FF9C;
+  box-shadow: 0 0 15px rgba(0, 255, 156, 0.4);
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(to top, rgba(139, 92, 246, 0.08), transparent);
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.ctaContent {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.ctaContent h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  line-height: 1.2;
+}
+.ctaContent p {
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.8);
+  max-width: 650px;
+  font-weight: 300;
+}
+.ctaButtonLarge {
+  padding: 1.2rem 4rem;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  background: #8B5CF6;
+  color: #fff;
+  font-weight: 800;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  text-decoration: none;
+}
+.ctaButtonLarge:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.6), 0 0 20px rgba(139, 92, 246, 0.8);
+  background: #9d73f7;
+}
+
+/* Card Headers */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.cardHeader h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.viewAllBtn {
+  color: #00FF9C;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: all 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: rgba(0, 255, 156, 0.05);
+}
+.viewAllBtn:hover {
+  background: rgba(0, 255, 156, 0.1);
+  text-shadow: 0 0 10px rgba(0, 255, 156, 0.5);
+}
+
+/* =========================================================================
+   Responsive Adjustments
+========================================================================= */
+@media (max-width: 1024px) {
+  .heroContentContainer {
+    padding: 0 2rem;
+  }
+  
+  .quoteText {
+    font-size: 3rem;
+  }
+
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding-top: 100px;
+  }
+
+  .heroContentContainer {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .quoteBlock {
+    align-items: center !important;
+  }
+  
+  .quoteText {
+    font-size: 2.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .trendingGamesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .trendingGamesGrid {
+    grid-template-columns: 1fr;
+  }
+}
