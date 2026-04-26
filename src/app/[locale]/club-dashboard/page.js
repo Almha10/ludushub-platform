@@ -92,7 +92,7 @@ export default function ClubDashboardRedirect() {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#0B0F14', color: '#fff' }}>
-      <div className="neon-text" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>ArenaHub Identity System</div>
+      <div className="neon-text" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>LudusHub Identity System</div>
       <p style={{ color: 'rgba(255,255,255,0.6)' }}>{status}</p>
       <div style={{ marginTop: '2rem', width: '40px', height: '40px', border: '3px solid rgba(56, 189, 248, 0.1)', borderTopColor: '#38bdf8', borderRadius: '50%', animation: 'spin 1s linear infinite' }}></div>
       <style jsx>{`

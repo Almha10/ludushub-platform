@@ -60,7 +60,7 @@ export default function ProfilePage() {
             followers: 0,
             following: 0,
             achievements: 0,
-            bio: "أهلاً بك في ArenaHub!",
+            bio: "أهلاً بك في LudusHub!",
             favorite_games: []
           }).select().single();
           

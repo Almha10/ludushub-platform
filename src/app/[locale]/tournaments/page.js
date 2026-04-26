@@ -29,7 +29,7 @@ const INITIAL_TOURNAMENTS = [
     id: "trn_2",
     title: "بطولة نهاية الأسبوع - FC 24",
     game: "EA SPORTS FC 24", // Adjusted for better RAWG search
-    host: "ArenaHub Official",
+    host: "LudusHub Official",
     hostId: "0",
     status: "upcoming",
     prize: "10,000 ريال",

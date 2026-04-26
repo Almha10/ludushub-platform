@@ -92,7 +92,7 @@ export default function Navbar({ locale }) {
         <div className={styles.container}>
           <Link href="/" className={styles.logo}>
             <Gamepad2 size={28} className={styles.logoIcon} />
-            <span className="neon-text">ArenaHub</span>
+            <span className="neon-text">LudusHub</span>
           </Link>
 
           <div className={styles.navLinks}>

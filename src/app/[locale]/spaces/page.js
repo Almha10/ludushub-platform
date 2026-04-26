@@ -168,8 +168,8 @@ export default function SpacesPage() {
 
   const displayFeed = feed.length > 0 ? feed : (!loading ? [{
     id: 'system_dummy',
-    user_name: "نظام_ArenaHub",
-    user_tag: "@arenahub",
+    user_name: "نظام_LudusHub",
+    user_tag: "@ludushub",
     game: activeFilter,
     content: `مرحباً بك في مساحة ${activeFilter}! كن أول من يبدأ المحادثة هنا.`,
     likes: 0, reposts: 0, comments: 0, created_at: new Date().toISOString(), is_looking_for_team: false

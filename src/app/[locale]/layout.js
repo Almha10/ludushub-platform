@@ -9,7 +9,7 @@ const cairo = Cairo({ subsets: ['arabic'], variable: '--font-cairo' });
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
 
 export const metadata = {
-  title: 'ArenaHub - Gaming Community',
+  title: 'LudusHub - Gaming Community',
   description: 'Connecting the future of gamers in Saudi Arabia and the world.',
 };
 

@@ -70,7 +70,7 @@ export default function PlayerCard({
       const canvas = await html2canvas(cardRef.current, { scale: 2, backgroundColor: null, useCORS: true });
       const dataUrl = canvas.toDataURL('image/png');
       const link = document.createElement('a');
-      link.download = `ArenaHub-${username}-ID.png`;
+      link.download = `LudusHub-${username}-ID.png`;
       link.href = dataUrl;
       link.click();
     } catch (error) {
@@ -109,7 +109,7 @@ export default function PlayerCard({
             <span className={`${styles.statusDot} ${status === 'متصل' ? styles.online : styles.offline}`}></span>
             <span className={styles.statusText}>{status}</span>
           </div>
-          <div className={styles.brand}>ARENAHUB <span className={styles.identityText}>IDENTITY</span></div>
+          <div className={styles.brand}>LUDUSHUB <span className={styles.identityText}>IDENTITY</span></div>
         </div>
 
         {/* Profile Core: Avatar + Bio Column */}
@@ -167,7 +167,7 @@ export default function PlayerCard({
             />
           ) : (
             <p className={styles.bioText} onClick={() => setIsEditingBio(true)}>
-              {bio || "اكتشف عالم الألعاب التنافسي في ArenaHub..."}
+              {bio || "اكتشف عالم الألعاب التنافسي في LudusHub..."}
             </p>
           )}
         </div>
@@ -225,7 +225,7 @@ export default function PlayerCard({
             <div className={styles.idInner}>
               <div className={styles.qrContainer}>
                 <QRCodeSVG 
-                  value={tag ? `https://arenahub.com/player/${encodeURIComponent(tag.replace('#', ''))}` : 'https://arenahub.com'} 
+                  value={tag ? `https://ludushub.com/player/${encodeURIComponent(tag.replace('#', ''))}` : 'https://ludushub.com'} 
                   size={140} 
                   bgColor="transparent" 
                   fgColor="#fff" 
