@@ -44,7 +44,23 @@ This project demonstrates:
 ---
 
 ## ⚙️ Run Locally
-
 ```bash
 npm install
 npm run dev
+--
+Open:
+http://localhost:3000
+--
+
+---
+
+## 📌 Future Improvements
+- Real-time chat system  
+- Notifications system  
+- Advanced dashboard analytics  
+- External APIs integration  
+
+---
+
+## 👩‍💻 Author
+Maha Alanzi
